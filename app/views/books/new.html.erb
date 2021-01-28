@@ -1,0 +1,13 @@
+<%= link_to "Back to List", books_path, class: 'back-link' %>
+
+<div class="book_new">
+    <h2>Create Book</h2>
+
+    <%= form_for( @book ) do |f| %>
+    <%= render partial: 'form', locals: {f: f} %>
+    <div class="form-buttons">
+        <%= f.submit "Create Book", disable_with: 'Creating Book...' %>
+    </div>
+    <% end %>
+
+</div>
