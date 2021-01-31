@@ -1,3 +1,5 @@
+<% content_for(:title) { @book.title } %>
+
 <%= link_to "Back to List", books_path, class: 'back-link' %>
 
 <div class="book_show">
@@ -6,11 +8,11 @@
     <table summary="Book detail view">
         <tr>
             <th>Title</th>
-            <td><%= @book.title %></td>
+            <td><%= strip_tags @book.title %></td>
         </tr>
         <tr>
             <th>Author</th>
-            <td><%= @book.author %></td>
+            <td><%= strip_tags @book.author %></td>
         </tr>
         <tr>
             <th>Genre</th>
@@ -22,15 +24,15 @@
         </tr>
         <tr>
             <th>Published Date</th>
-            <td><%= @book.published_date %></td>
+            <td><%= @book.published_date.strftime("%B %d, %Y") %></td>
         </tr>
         <tr>
             <th>Created</th>
-            <td><%= @book.created_at %></td>
+            <td><%= @book.created_at.to_s(:long) %></td>
         </tr>
         <tr>
             <th>Updated</th>
-            <td><%= @book.updated_at %></td>
+            <td><%= @book.updated_at.to_s(:long) %></td>
         </tr>
     </table>
 </div>
