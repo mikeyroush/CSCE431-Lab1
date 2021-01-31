@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <th>Genre</th>
-        <td><%= f.text_field :genre %></td>
+        <td><%= f.select :genre, ['Fantasy', 'Science Fiction', 'Action & Adventure', 'Mystery', 'Horror', 'Historical', 'Romance'] %></td>
     </tr>
     <tr>
         <th>Price</th>
@@ -19,6 +19,6 @@
     </tr>
     <tr>
         <th>Published Date</th>
-        <td><%= f.text_field :published_date, data: {provide:'datepicker'} %></td>
+        <td><%= f.date_select :published_date %></td>
     </tr>
 </table>
