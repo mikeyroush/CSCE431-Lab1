@@ -3,7 +3,7 @@
 
 <head>
     <title>Book Collection <%= ' - ' + yield(:title) if content_for?(:title) %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,18 +13,18 @@
 
 <body>
 
-    <div class="wrapper">
-        <header>
-            <h1>Book Collection</h1>
-        </header>
+    <div class=" wrapper">
+    <header>
+        <h1>Book Collection</h1>
+    </header>
 
-        <%= render partial: 'application/flash' %>
+    <%= render partial: 'application/flash' %>
 
-        <div id="content">
-            <%= yield %>
-        </div>
+    <div id="content">
+        <%= yield %>
+    </div>
     </div>
 
-</body>
+    </body>
 
 </html>
