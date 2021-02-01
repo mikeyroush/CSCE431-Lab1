@@ -11,14 +11,15 @@
     </tr>
     <tr>
         <th>Genre</th>
-        <td><%= f.select :genre, ['Fantasy', 'Science Fiction', 'Action & Adventure', 'Mystery', 'Horror', 'Historical', 'Romance'] %></td>
+        <% genres = ['Fantasy', 'Science Fiction', 'Action & Adventure', 'Mystery', 'Horror', 'Historical', 'Romance', 'Christian'] %>
+        <td><%= f.select :genre, genres.sort %></td>
     </tr>
     <tr>
-        <th>Price</th>
+        <th>Price ($)</th>
         <td><%= f.text_field :price %></td>
     </tr>
     <tr>
         <th>Published Date</th>
-        <td><%= f.date_select :published_date %></td>
+        <td><%= f.date_select :published_date, start_year: Date.today.year, end_year: Date.today.year - 150 %></td>
     </tr>
 </table>

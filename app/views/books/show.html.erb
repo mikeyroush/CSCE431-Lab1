@@ -20,7 +20,7 @@
         </tr>
         <tr>
             <th>Price</th>
-            <td><%= @book.price %></td>
+            <td><%= number_to_currency(@book.price) %></td>
         </tr>
         <tr>
             <th>Published Date</th>
