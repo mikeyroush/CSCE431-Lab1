@@ -41,14 +41,17 @@ header {
 }
 
 #content {
+	margin-top: 6rem;
 	position: relative;
 	display: block;
 	background: $light;
 	width: 70vw;
 	max-width: 1200px;
+	max-height: 90vh;
 	padding: 3em;
 	box-shadow: 0 0 3em rgba($color: #000000, $alpha: 0.15);
 	border-radius: 0.5em;
+	overflow: scroll;
 }
 
 #flash-notice {
@@ -114,4 +117,11 @@ input[type="submit"] {
 	background: $neutral;
 	color: $dark;
 	margin-top: 1em;
+}
+
+@media screen and (max-width: $breakMed), screen and (max-height: $breakSmall) {
+	#content {
+		width: 90vw;
+		padding: 1.5em;
+	}
 }
