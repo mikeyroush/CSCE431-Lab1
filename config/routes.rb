@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # root
   root 'books#index'
 
+  #RESTful routes
   resources :books do
     member do
       get :delete
