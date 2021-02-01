@@ -85,5 +85,3 @@ test:
 production:
   <<: *default
   database: CSCE431_Lab1_production
-  username: CSCE431_Lab1
-  password: <%= ENV['CSCE431_LAB1_DATABASE_PASSWORD'] %>
