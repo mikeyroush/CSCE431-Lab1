@@ -14,7 +14,8 @@
 
 .wrapper {
 	font-family: basic-sans, sans-serif;
-	min-height: 100vh;
+	height: 100vh;
+	min-height: 470px;
 	background: $neutral;
 	color: $dark;
 	display: flex;
@@ -52,7 +53,7 @@ header {
 
 #flash-notice {
 	position: fixed;
-	top: 5em;
+	top: 2em;
 	z-index: 10;
 	width: 60vw;
 	max-width: 1200px;
